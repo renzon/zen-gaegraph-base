@@ -1,0 +1,43 @@
+application: zengaegraph
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+- name: jinja2
+  version: "2.6"
+
+- name: webapp2
+  version: "2.5.2"
+
+- name: webob
+  version: "1.2.3"
+
+- name: markupsafe
+  version: "0.15"
+
+- name: setuptools
+  version: "0.6c11"
+
+inbound_services:
+- warmup
+
+builtins:
+- remote_api: on
+
+
+handlers:
+
+
+- url: /(.*)static(.*)
+  static_files: plugins/web/\1static\2
+  upload: plugins/web/.*static.*
+
+- url: /
+  script: convention.app
+
+- url: /([^_]).*
+  script: convention.app
+
+
