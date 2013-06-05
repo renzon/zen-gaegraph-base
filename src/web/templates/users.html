@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<form action="/user/save" method="post">
+    Name: <input type="text" name="name"><br />
+    <input type="submit" />
+</form>
+<h2>Users</h2>
+    <ol>
+        {% for u in users %}
+            <li>{{ u.name }} - <a href="/node/{{ u.key.id() }}">Details</a></li>
+        {% endfor %}
+    </ol>
+
+</body>
+</html>
