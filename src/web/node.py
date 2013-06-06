@@ -9,8 +9,8 @@ def index(_resp, id):
     business.execute(node_search)
     if node_search.errors:
         _resp.write(node_search.errors)
-    elif node_search.node:
-        _resp.write(node_search.node.to_dict())
+    elif node_search.result:
+        _resp.write(node_search.result.to_dict())
     else:
         _resp.write("Node not found")
 
