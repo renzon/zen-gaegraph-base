@@ -8,7 +8,7 @@ from zen import router
 def list(_write_tmpl):
     list_users=user_business.ListUsers()
     business.execute(list_users)
-    _write_tmpl("templates/users.html",{"users":list_users.users})
+    _write_tmpl("templates/result.html",{"result":list_users.result})
 
 def save(_handler,_resp,name):
     save_user=user_business.SaveUser(name)
