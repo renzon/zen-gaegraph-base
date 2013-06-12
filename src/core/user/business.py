@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 from core.user.model import User
-from gaegraph.business import UseCase
+from gaebusiness.business import UseCase
 
 
 class ListUsers(UseCase):

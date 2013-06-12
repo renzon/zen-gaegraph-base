@@ -2,7 +2,7 @@
 from __future__ import absolute_import, unicode_literals
 from core.user.business import ListUsers, SaveUser
 from core.user.model import User
-from gaegraph import business
+from gaebusiness import business
 from util.gae import GAETestCase
 
 

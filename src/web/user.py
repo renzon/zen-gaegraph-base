@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 from core.user import business as user_business
-from gaegraph import business
+from gaebusiness import business
 from zen import router
 
 
